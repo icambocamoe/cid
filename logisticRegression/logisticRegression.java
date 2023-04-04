@@ -11,16 +11,20 @@ public class logisticRegression{
 
     
     public static void main(String[] args) {
+        double yhat=0;
         for(int k = 0; k < iter; k++){
             Arrays.fill(sum, 0);
             
             for(int i = 0; i < 3; i++){
                 //calular la sumatorias
                 for(int j = 0; j < 3; j++){
-                    sum[i] += (h(x[i])-y[j])*x[i][j];//vale queso, era el iterador 'j' en 'y', no el 'i'
+                    yhat = h(x[i]);
+                    sum[i] += (yhat-y[j])*x[i][j];//vale queso, era el iterador 'j' en 'y', no el 'i'
                     
-                }                
+                }    
+               // if ((yhat-y[i])==0) break; 
             }
+            
             //calcular nuevos pesos
             for(int i = 0; i < 3; i++)
                 w[i] = w[i] - alpha * sum[i];

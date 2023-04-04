@@ -10,8 +10,8 @@ public class SLRAgent extends Agent {
     private double sigma_x = 0.0, sigma_y = 0.0, sigma_xy = 0.0, sigma_x2 = 0.0;
     private static double beta_1 = 0.0;
     private static double beta_0 = 0.0;
-    private final static double[] x = {1,2,3,4,5,6,7,8,9};
-    private final static double[] y = {3,6,9,12,15,18,21,24,27};
+    private final static double[] x = {1,2,3,4,5,6,7};
+    private final static double[] y = {0.72,0.80,0.90,1.40,0.72,0.72,0.68};
     private int n = x.length;
     private double predictX = 0.0;
 
